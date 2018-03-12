@@ -18,7 +18,7 @@
 		move_uploaded_file($_FILES['img']['tmp_name'], "Images/profilimg/".$_FILES['img']['name']);
 		$q =mysql_query("UPDATE dosen SET img = '$img', nama ='$nama', jurusan='$jurusan', email='$email',fakultas='$fakultas' WHERE nidn='$nidn'");
 		if($q){
-			echo "<script>alert('Data Berhasil Diubah !'); window.location = 'tampil_profil_admin.php'</script>";
+			echo "<script>alert('Data Berhasil Diubah !'); window.location = 'tampil_profil_dsn.php'</script>";
 		}else{
 			echo "<script>alert('Update Gagal !'); window.location = 'tampil_profil_admin.php'</script>";
 		}
